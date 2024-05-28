@@ -69,8 +69,8 @@ def image_model(inputs: dict) -> str | list[str]| dict:
     model = AzureChatOpenAI(
         openai_api_version="2023-05-15",
         azure_deployment='vision_model',
-        api_key="6c9ba7fffe574ed6983a7dbadabc3a04",
-        azure_endpoint="https://aavision.openai.azure.com/",
+        api_key=st.secrets.api_key,
+        azure_endpoint=st.secrets.azure_endpoint,
         temperature=0.1,
         max_tokens=4096,
     )
