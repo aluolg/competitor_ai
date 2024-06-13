@@ -11,6 +11,9 @@ from langchain.chains.transform import TransformChain
 from langchain_core.runnables import chain
 from langchain_core.pydantic_v1 import BaseModel, Field
 
+import pandas as pd
+import re  
+
 
 ##check if there are folders in the given path, if so, get all the images path in those folders
 
@@ -87,10 +90,45 @@ def get_offer(company_name: str):
     ##get folder path base on place_id
     image_path = f"{company_name}/"
     vision_prompt = """
-    You will receive a screenshot a sportbetting website. List all the promotion offers available on the website.
+    Create a list of the brands that are offering promotions in the images you see. 
+    List each and every promotion from these brands with headline and a few bullet 
+    points summary about the offer in a table and in the table separately highlight 
+    the key benefits in the next column. Add columns of information that categorize 
+    them into Sports, Casino, Poker, Other product groups. Also, add a column to summarize 
+    if the promotional content is targeted for customer acquisition or retention.
     """
     vision_chain = load_image_chain| image_model | parser
 
     return vision_chain.invoke({"image_path":f"{image_path}","prompt": vision_prompt})
 
-print(get_offer("betmgm"))
+
+# convert response to pandas dataframe and save as csv file
+response = get_offer("betmgm")
+print(response)
+
+# Use regex to extract the table part
+table_regex = re.compile(r"\|.*?\|\n(\|.*?\|\n)+")
+match = table_regex.search(response)
+
+if match:
+    table_text = match.group(0)
+
+    # Split the table text into lines
+    lines = table_text.strip().split('\n')
+
+    # Extract column names
+    columns = [col.strip() for col in lines[0].split('|') if col.strip()]
+
+    # Extract data
+    data = []
+    for line in lines[2:]:
+        row = [col.strip() for col in line.split('|') if col.strip()]
+        data.append(row)
+
+    # Create DataFrame
+    df = pd.DataFrame(data, columns=columns)
+    
+else:
+    print("Table not found in the text.")
+
+df.to_csv('response.csv',index=False)
