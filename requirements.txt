@@ -1,6 +1,5 @@
 selenium 
 langchain
-playwright
 langchain_openai
 langchain-community
 langchain-core

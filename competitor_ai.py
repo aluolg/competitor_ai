@@ -1,4 +1,3 @@
-
 import langchain as lc
 import base64
 from langchain_core.prompts import ChatPromptTemplate
@@ -10,10 +9,13 @@ from langchain_openai import AzureChatOpenAI
 from langchain.chains.transform import TransformChain
 from langchain_core.runnables import chain
 from langchain_core.pydantic_v1 import BaseModel, Field
+import streamlit as st
 
 import pandas as pd
 import re  
 
+l = pd.read_csv('./scrape_list/scrape_list_formatted.csv')
+l = set(l['Operator'])
 
 ##check if there are folders in the given path, if so, get all the images path in those folders
 
@@ -61,10 +63,10 @@ def image_model(inputs: dict) -> str | list[str]| dict:
     """Invoke model with image and prompt."""
     model = AzureChatOpenAI(
         openai_api_version="2023-05-15",
-        azure_deployment='vision_model',
-        api_key="6c9ba7fffe574ed6983a7dbadabc3a04",
-        azure_endpoint="https://aavision.openai.azure.com/",
-        temperature=0.1,
+        azure_deployment='gpt_4o',
+        api_key = st.secrets['AZURE_OPENAI_API_KEY'],
+        azure_endpoint=st.secrets['AZURE_OPENAI_ENDPOINT'],
+        temperature=0,
         max_tokens=4096,
     )
     msg = model.invoke(
@@ -87,8 +89,9 @@ def image_model(inputs: dict) -> str | list[str]| dict:
 
 def get_offer(company_name: str):
     parser = StrOutputParser()
-    ##get folder path base on place_id
+    # get folder path
     image_path = f"{company_name}/"
+    
     vision_prompt = """
     Create a list of the brands that are offering promotions in the images you see. 
     List each and every promotion from these brands with headline and a few bullet 
@@ -103,32 +106,37 @@ def get_offer(company_name: str):
 
 
 # convert response to pandas dataframe and save as csv file
-response = get_offer("betmgm")
-print(response)
+output = pd.DataFrame()
+for n in l:
+    print(f"working on {n}...")
+    response = get_offer(n)
 
-# Use regex to extract the table part
-table_regex = re.compile(r"\|.*?\|\n(\|.*?\|\n)+")
-match = table_regex.search(response)
+    # Use regex to extract the table part
+    table_regex = re.compile(r"\|.*?\|\n(\|.*?\|\n)+")
+    match = table_regex.search(response)
 
-if match:
-    table_text = match.group(0)
+    if match:
+        table_text = match.group(0)
 
-    # Split the table text into lines
-    lines = table_text.strip().split('\n')
+        # Split the table text into lines
+        lines = table_text.strip().split('\n')
 
-    # Extract column names
-    columns = [col.strip() for col in lines[0].split('|') if col.strip()]
+        # Extract column names
+        columns = [col.strip() for col in lines[0].split('|') if col.strip()]
 
-    # Extract data
-    data = []
-    for line in lines[2:]:
-        row = [col.strip() for col in line.split('|') if col.strip()]
-        data.append(row)
+        # Extract data
+        data = []
+        for line in lines[2:]:
+            row = [col.strip() for col in line.split('|') if col.strip()]
+            data.append(row)
 
-    # Create DataFrame
-    df = pd.DataFrame(data, columns=columns)
+        # Create DataFrame
+        df = pd.DataFrame(data, columns=columns)
+        output = pd.concat([output,df])
+        
+    else:
+        print("Table not found in the text.")
     
-else:
-    print("Table not found in the text.")
+    print(f"done with {n}")
 
-df.to_csv('response.csv',index=False)
+output.to_csv('response.csv',index=False)

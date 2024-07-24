@@ -11,6 +11,9 @@ langchain-openai = "*"
 langchain-community = "*"
 langchain-core = "*"
 streamlit = "*"
+openpyxl = "*"
+undetected-chromedriver = "*"
+ipykernel = "*"
 
 [dev-packages]
 ipykernel = "*"

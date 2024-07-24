@@ -1,14 +1,33 @@
-Brand,Promotion Headline,Summary of Offer,Key Benefits,Product Group,Customer Target
-NorthStar Bets,SUPERSTARS,Bet on a player to score and earn bonuses when they do so two or more times.,Earn bonuses for successful player bets,Sportsbook,Retention
-NorthStar Bets,DAILY BET BOOSTERS,Boost odds on one of your bets every single day by logging in.,Enhanced odds for daily bets,Sportsbook,Retention
-NorthStar Bets,PARLAY PAYDAY,Stake at least $50 on parlays and qualify for a $20 Bonus Bet on Monday.,$20 Bonus Bet for parlay betting,Sportsbook,Retention
-NorthStar Bets,"FIRST DEPOSIT MATCH UP TO $1,000","Get 100% of your first casino deposit matched up to $1,000.","Double the first deposit up to $1,000",Casino,Acquisition
-NorthStar Bets,WIN GOLDEN CHIPS EVERY HOUR,Qualify on Bonus Round numbers to win $200 in Golden Chips every hour.,Chance to win $200 in Golden Chips hourly,Casino,Retention
-NorthStar Bets,DEPOSIT AND GET BONUS SPINS,Deposit the qualifying amount for Bonus Spins on premium slots.,Bonus Spins on premium slots,Casino,Retention
-NorthStar Bets,10% BACK,Opt in to return 10% of Casino losses for the week.,10% cashback on weekly casino losses,Casino,Retention
-NorthStar Bets,LOYALTY POINTS,Every cash bet in the Casino earns points that can be converted back into cash.,Convert betting points into cash,Casino,Retention
-BetMGM,"Get Up To $1,500 Paid Back In Bonus Bets","New accounts get their first bet offer, with a refund in bonus bets if lost.",Refund in bonus bets for the first lost bet,Sportsbook,Acquisition
-BetMGM,Women's Basketball Odds Boost Token,Boost odds on Women's Pro Basketball bets for bigger potential winnings.,Increased potential winnings on Women's Basketball bets,Sportsbook,Retention
-BetMGM,Refer A Friend,Refer friends to join BetMGM and both receive a referral bonus.,Referral bonus for both parties,Poker,Retention
-BetRivers,24 hours of Casino Losses Back,Get up to $500 back on casino losses with a 1x playthrough requirement.,Up to $500 back on casino losses with low playthrough,Casino,Acquisition
-BetRivers,Second Chance Bet Up To A $500 Bonus Bet,Use code SPORTS for a second chance bet bonus.,Second chance bet bonus up to $500,Sportsbook,Acquisition
+Brand,Promotion Headline,Summary,Key Benefits,Category,Targeted For,Targeted for Acquisition or Retention,Summary of Offer
+BETMGM,Bet On The Euros For A Casino Reward,"- Bet on the Euros and earn up to $5,000 in casino bonuses. <br> - Place bets on soccer matches. <br> - Guaranteed casino rewards.","- Up to $5,000 in casino bonuses. <br> - Guaranteed rewards.",Sports,Acquisition,,
+BETMGM,BETMGM Poker Welcome Offer,"- Sign up for a new poker account. <br> - Get up to $1,000 plus $75 on the house. <br> - Earn Tournament Tickets.","- $1,000 bonus. <br> - $75 on the house. <br> - Tournament Tickets.",Poker,Acquisition,,
+BETMGM,The More The Merrier!,- Refer a friend to BETMGM. <br> - Both you and your friend receive a referral bonus.,- Referral bonus for both parties.,"Casino, Sports",Acquisition,,
+BETMGM,Hot Tables,- Play on hot tables and earn rewards. <br> - Special rewards for playing on selected tables.,- Special rewards.,Casino,Retention,,
+BETMGM,Grind Rewards,"- Earn poker rewards with the weekly Grind Rewards. <br> - The more you play, the more you earn.",- Weekly rewards. <br> - Increased earnings with more play.,Poker,Retention,,
+BETMGM,"Get Up To $1,500 Paid Back in Bonus","- Get up to $1,500 paid back in bonus. <br> - Available for new customers.","- Up to $1,500 bonus.",Sports,Acquisition,,
+BETMGM,NBA Finals Odds Boost Token,- 50% bigger payout every game day. <br> - Available for NBA Finals.,- 50% bigger payout.,Sports,Retention,,
+BETMGM,Go For The Goal With Our Boost Pack!,- 3 ways to boost your odds. <br> - Available for selected games.,- Boosted odds.,Sports,Retention,,
+BETMGM,Soccer 2 Up Early Payout,- Win your bet if your team goes 2 goals up. <br> - Available for soccer matches.,- Early payout.,Sports,Retention,,
+BETMGM,Enter The Summer Of Soccer Sweepstakes,"- Win up to $20,000 in prizes. <br> - Enter by placing bets on soccer matches.","- Up to $20,000 in prizes.",Sports,Acquisition,,
+BETMGM,MLB Grand Slam Jackpot,"- Bet for a shot at $10,000 in bonus bets. <br> - Available for MLB games.","- $10,000 in bonus bets.",Sports,Acquisition,,
+BETMGM,Swing For Prizes In Our Free-To-Play Game,- Play free-to-play games and win prizes. <br> - Available for all users.,- Free-to-play. <br> - Win prizes.,Sports,Retention,,
+NorthStar Bets,First Deposit Matched to $1K,"- 100% match on first casino deposit up to $1,000.","- Up to $1,000 bonus",Casino,Customer Acquisition,,
+NorthStar Bets,Football Fiesta,- Weekly leaderboard with individual prizes.,"- Earn up to $1,500 in prizes",Sports,Customer Retention,,
+NorthStar Bets,Win Golden Chips Daily,- Play participating games to win up to $500 in Golden Chips daily.,- Daily bonus of $500 in Golden Chips,Casino,Customer Retention,,
+NorthStar Bets,Free Kicks to Win Chips,- Test football knowledge to win Golden Chips.,- Win Golden Chips by playing True/False trivia,Sports,Customer Retention,,
+NorthStar Bets,Bonus Spins Twice a Day,- Deposit and get bonus spins on three premium slots.,- Bonus spins on premium slots,Casino,Customer Retention,,
+NorthStar Bets,10% Back,- 10% back on casino losses every Monday.,- 10% return on losses,Casino,Customer Retention,,
+NorthStar Bets,"7, 17, and 23 Win Daily",- Win Golden Chips if the ball lands on a lucky number.,- Daily chance to win Golden Chips,Casino,Customer Retention,,
+NorthStar Bets,"$200,000 Cash Up for Grabs This Year","- Play for a chance to win a share of $200,000 in cash prizes.","- Total prize of $200,000",Casino,Customer Retention,,
+NorthStar Bets,Cash Bets Earn Points,- Earn points on every cash bet placed in the casino.,- Points can be converted to cash,Casino,Customer Retention,,
+NorthStar Bets,Play Drops & Wins for Daily Prizes,"- Qualified spins can win up to 2,500x daily.","- Win up to 2,500x daily",Casino,Customer Retention,,
+NorthStar Bets,NorthStar Elite Loyalty Points,- Earn points on every cash bet placed in the casino.,- Points can be converted to cash,Casino,Customer Retention,,
+NorthStar Bets,Get Free Loyalty Points,- NorthStar ELITE members earn points every time they log in.,- Free loyalty points,Casino,Customer Retention,,
+NorthStar Bets,25% Euro Matchday Boost,- 25% boost on pre-match bets up to $50 on any Matchday 1 contest.,- 25% boost on bets,Sports,Customer Acquisition,,
+NorthStar Bets,Play Super Stars Every Week,- Bet $10 on a player to score a goal/touchdown/home run and win bonuses.,- Win bonuses for player achievements,Sports,Customer Retention,,
+NorthStar Bets,Bet Boosters Every Day,- Boost your odds on one of your bets every single day.,- Daily odds boost,Sports,Customer Retention,,
+NorthStar Bets,Parlay Payday,- Stake at least $50 on parlays during the promotion period.,- $20 bonus bet on Monday,Sports,Customer Retention,,
+DraftKings,DraftKings Sportsbook is Here!,- Create an account online or download the app.<br>- Find the sport and outcome you want to bet on.<br>- Place a bet pregame or live as the action unfolds.,- Easy account creation.<br>- Wide range of sports and outcomes to bet on.<br>- Live betting options.,Sports,,Acquisition,
+DraftKings,DraftKings is Launching Sportsbook and Casino,"**Sportsbook**<br>- Safe and secure online sports betting platform.<br>- Thousands of ways to bet.<br>- Quick and easy to withdraw your winnings.<br>**Casino**<br>- Over 300 games, including Casino classics and DraftKings exclusives.<br>- Live Dealer games available.<br>- Easy to jump in 24/7/365.",**Sportsbook**<br>- Secure platform.<br>- Variety of betting options.<br>- Fast withdrawals.<br>**Casino**<br>- Large selection of games.<br>- Live Dealer games.<br>- 24/7 availability.,"Sports, Casino",,Acquisition,
+BetRivers,Your Home for Chance - $500 Cashback,,- Risk-free play<br>- High cashback amount,Casino,Customer Acquisition,,- 24 hours of Risk-Free Play<br>- Up to $500 Cashback<br>- Play on any game<br>- Opt-in required
+BetRivers,Second Chance Bet - Up to $250 Bonus Bet,,- Second chance to win<br>- High bonus amount,Sports,Customer Acquisition,,- Second chance bet<br>- Up to $250 bonus<br>- Applicable on sports bets<br>- Opt-in required
