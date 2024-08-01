@@ -132,6 +132,7 @@ for n in l:
 
         # Create DataFrame
         df = pd.DataFrame(data, columns=columns)
+        df.columns=['Brand','Promotion Headline','Summary of Offer','Key Benefits','Category','Targeted For']
         output = pd.concat([output,df])
         
     else:
@@ -139,4 +140,6 @@ for n in l:
     
     print(f"done with {n}")
 
-output.to_csv('response.csv',index=False)
+output = output.astype(str)
+output.to_excel('response.xlsx')
+print("output generated!")
